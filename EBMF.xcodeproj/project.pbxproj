@@ -7,21 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25E7D2631CCF341100D45FCA /* UIViewController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E7D2621CCF341100D45FCA /* UIViewController+Container.swift */; };
+		25E7D2651CCF385E00D45FCA /* EBSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E7D2641CCF385E00D45FCA /* EBSegment.swift */; };
+		25E7D2671CCF51AC00D45FCA /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E7D2661CCF51AC00D45FCA /* NewsManager.swift */; };
+		25E7D2691CCF612800D45FCA /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E7D2681CCF612800D45FCA /* NewsModel.swift */; };
 		25F65AE91CC9B856006398D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F65AE81CC9B856006398D0 /* AppDelegate.swift */; };
-		25F65AEB1CC9B856006398D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F65AEA1CC9B856006398D0 /* ViewController.swift */; };
+		25F65AEB1CC9B856006398D0 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F65AEA1CC9B856006398D0 /* ContainerViewController.swift */; };
 		25F65AEE1CC9B856006398D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F65AEC1CC9B856006398D0 /* Main.storyboard */; };
 		25F65AF01CC9B856006398D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25F65AEF1CC9B856006398D0 /* Assets.xcassets */; };
 		25F65AF31CC9B856006398D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F65AF11CC9B856006398D0 /* LaunchScreen.storyboard */; };
+		25F65AFB1CC9BDAC006398D0 /* re.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25F65AFA1CC9BDAC006398D0 /* re.jpg */; };
+		25F65AFD1CC9C033006398D0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F65AFC1CC9C033006398D0 /* HomeViewController.swift */; };
+		25F65AFF1CC9ED63006398D0 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F65AFE1CC9ED63006398D0 /* LeftMenuViewController.swift */; };
+		25F65B011CC9EE72006398D0 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 25F65B001CC9EE72006398D0 /* avatar.png */; };
+		B4DD5629549EA86D659ED4DB /* Pods_EBMF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18F4CE5F5B39246DF249810 /* Pods_EBMF.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A19A6125FAC6B1173B22943 /* Pods-EBMF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBMF.release.xcconfig"; path = "Pods/Target Support Files/Pods-EBMF/Pods-EBMF.release.xcconfig"; sourceTree = "<group>"; };
+		25E7D2621CCF341100D45FCA /* UIViewController+Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Container.swift"; sourceTree = "<group>"; };
+		25E7D2641CCF385E00D45FCA /* EBSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBSegment.swift; sourceTree = "<group>"; };
+		25E7D2661CCF51AC00D45FCA /* NewsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
+		25E7D2681CCF612800D45FCA /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		25F65AE51CC9B856006398D0 /* EBMF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EBMF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25F65AE81CC9B856006398D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		25F65AEA1CC9B856006398D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		25F65AEA1CC9B856006398D0 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		25F65AED1CC9B856006398D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25F65AEF1CC9B856006398D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25F65AF21CC9B856006398D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25F65AF41CC9B856006398D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25F65AFA1CC9BDAC006398D0 /* re.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = re.jpg; sourceTree = "<group>"; };
+		25F65AFC1CC9C033006398D0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		25F65AFE1CC9ED63006398D0 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		25F65B001CC9EE72006398D0 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		39886C746A78A08E1C5BE54A /* Pods-EBMF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBMF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EBMF/Pods-EBMF.debug.xcconfig"; sourceTree = "<group>"; };
+		F18F4CE5F5B39246DF249810 /* Pods_EBMF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EBMF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4DD5629549EA86D659ED4DB /* Pods_EBMF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +61,8 @@
 			children = (
 				25F65AE71CC9B856006398D0 /* EBMF */,
 				25F65AE61CC9B856006398D0 /* Products */,
+				7C840F0937DC43E36811EBA2 /* Pods */,
+				918A54B09EDE942EACE5900D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +77,39 @@
 		25F65AE71CC9B856006398D0 /* EBMF */ = {
 			isa = PBXGroup;
 			children = (
+				25F65B001CC9EE72006398D0 /* avatar.png */,
 				25F65AE81CC9B856006398D0 /* AppDelegate.swift */,
-				25F65AEA1CC9B856006398D0 /* ViewController.swift */,
+				25E7D2641CCF385E00D45FCA /* EBSegment.swift */,
+				25F65AEA1CC9B856006398D0 /* ContainerViewController.swift */,
+				25E7D2621CCF341100D45FCA /* UIViewController+Container.swift */,
+				25F65AFE1CC9ED63006398D0 /* LeftMenuViewController.swift */,
+				25F65AFC1CC9C033006398D0 /* HomeViewController.swift */,
+				25E7D2661CCF51AC00D45FCA /* NewsManager.swift */,
+				25E7D2681CCF612800D45FCA /* NewsModel.swift */,
 				25F65AEC1CC9B856006398D0 /* Main.storyboard */,
+				25F65AFA1CC9BDAC006398D0 /* re.jpg */,
 				25F65AEF1CC9B856006398D0 /* Assets.xcassets */,
 				25F65AF11CC9B856006398D0 /* LaunchScreen.storyboard */,
 				25F65AF41CC9B856006398D0 /* Info.plist */,
 			);
 			path = EBMF;
+			sourceTree = "<group>";
+		};
+		7C840F0937DC43E36811EBA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39886C746A78A08E1C5BE54A /* Pods-EBMF.debug.xcconfig */,
+				1A19A6125FAC6B1173B22943 /* Pods-EBMF.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		918A54B09EDE942EACE5900D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F18F4CE5F5B39246DF249810 /* Pods_EBMF.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25F65AF71CC9B856006398D0 /* Build configuration list for PBXNativeTarget "EBMF" */;
 			buildPhases = (
+				20C27ABF1519DAC311350E53 /* Check Pods Manifest.lock */,
 				25F65AE11CC9B856006398D0 /* Sources */,
 				25F65AE21CC9B856006398D0 /* Frameworks */,
 				25F65AE31CC9B856006398D0 /* Resources */,
+				33BE2F4478A2EB698B86D21F /* Embed Pods Frameworks */,
+				8161E2A9068979231C3E13C9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +174,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F65AFB1CC9BDAC006398D0 /* re.jpg in Resources */,
+				25F65B011CC9EE72006398D0 /* avatar.png in Resources */,
 				25F65AF31CC9B856006398D0 /* LaunchScreen.storyboard in Resources */,
 				25F65AF01CC9B856006398D0 /* Assets.xcassets in Resources */,
 				25F65AEE1CC9B856006398D0 /* Main.storyboard in Resources */,
@@ -131,13 +184,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20C27ABF1519DAC311350E53 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		33BE2F4478A2EB698B86D21F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EBMF/Pods-EBMF-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8161E2A9068979231C3E13C9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EBMF/Pods-EBMF-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		25F65AE11CC9B856006398D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25F65AEB1CC9B856006398D0 /* ViewController.swift in Sources */,
+				25E7D2691CCF612800D45FCA /* NewsModel.swift in Sources */,
+				25E7D2651CCF385E00D45FCA /* EBSegment.swift in Sources */,
+				25F65AEB1CC9B856006398D0 /* ContainerViewController.swift in Sources */,
 				25F65AE91CC9B856006398D0 /* AppDelegate.swift in Sources */,
+				25E7D2631CCF341100D45FCA /* UIViewController+Container.swift in Sources */,
+				25F65AFF1CC9ED63006398D0 /* LeftMenuViewController.swift in Sources */,
+				25E7D2671CCF51AC00D45FCA /* NewsManager.swift in Sources */,
+				25F65AFD1CC9C033006398D0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +355,7 @@
 		};
 		25F65AF81CC9B856006398D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39886C746A78A08E1C5BE54A /* Pods-EBMF.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EBMF/Info.plist;
@@ -259,6 +367,7 @@
 		};
 		25F65AF91CC9B856006398D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A19A6125FAC6B1173B22943 /* Pods-EBMF.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EBMF/Info.plist;
@@ -287,6 +396,7 @@
 				25F65AF91CC9B856006398D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
