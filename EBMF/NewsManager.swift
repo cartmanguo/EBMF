@@ -51,11 +51,33 @@ class NewsManager: NSObject {
                 {
                     return
                 }
-                print(newsFeed)
+//                print(newsFeed)
                 for newsInfo in newsFeed
                 {
-                    newsInfo[imageUrlKey]
+                    var imgUrlArray = [String]()
+                    let imageUrl = newsInfo[imageUrlKey] as? String
+                    if imageUrl!.isUrl()
+                    {
+                        if imageUrl?.componentsSeparatedByString(",").count == 1
+                        {
+                            imgUrlArray.append(imageUrl!)
+                        }
+                        else
+                        {
+                            imgUrlArray.appendContentsOf(imageUrl!.componentsSeparatedByString(","))
+                        }
+                    }
+                    else
+                    {
+                        
+                    }
+                    let content = newsInfo[contentKey] as? String
+                    let title = newsInfo[titleKey] as? String
+//                    print(imgUrlArray.count)
+                    let newsModel = NewsModel(imageUrl: imgUrlArray, content: content, title: title)
+                    newsArray.append(newsModel)
                 }
+                completionHandler(news: newsArray)
                 
         }
     }
