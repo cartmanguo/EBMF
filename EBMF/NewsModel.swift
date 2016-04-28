@@ -22,8 +22,10 @@ struct NewsModel
 //    var isVideoContent:Bool = false
     func cellHeight()->CGFloat
     {
+        //256和109是在xib中的高度，算出实际collectionView的高度后，减去109加上实际高度
+        let collectionViewSize = UIScreen.mainScreen().bounds.size.width * 19/55 + UIScreen.mainScreen().bounds.size.width * 19/55 - 25 - UIScreen.mainScreen().bounds.size.width * 19/55
         let contentTextSize = (self.content! as NSString).boundingRectWithSize(CGSize(width: UIScreen.mainScreen().bounds.size.width - 8, height: 0), options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(15)], context: nil)
-        return contentTextSize.height + 8+44+8+1+8+5+100
+        return contentTextSize.height + 256-18 - 109 + collectionViewSize
     }
 
 }

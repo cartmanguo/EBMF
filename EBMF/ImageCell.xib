@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2Xo-q0-WiM" customClass="ImageCell" customModule="EBMF" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="frv-Pc-Rdp">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="frv-Pc-Rdp" secondAttribute="trailing" id="AGP-gZ-S3X"/>
+                <constraint firstItem="frv-Pc-Rdp" firstAttribute="leading" secondItem="2Xo-q0-WiM" secondAttribute="leading" id="JBy-PT-KR0"/>
+                <constraint firstAttribute="bottom" secondItem="frv-Pc-Rdp" secondAttribute="bottom" id="Vj3-V8-CoJ"/>
+                <constraint firstItem="frv-Pc-Rdp" firstAttribute="top" secondItem="2Xo-q0-WiM" secondAttribute="top" id="r65-af-jSC"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="frv-Pc-Rdp" id="asW-Nx-oCD"/>
+            </connections>
+            <point key="canvasLocation" x="167" y="46"/>
+        </collectionViewCell>
+    </objects>
+</document>

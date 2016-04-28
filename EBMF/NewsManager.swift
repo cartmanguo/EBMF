@@ -13,6 +13,14 @@ enum Platform:String
     case PlayStation = "1"
     case XBOX = "2"
 }
+enum NewsType:Int
+{
+    case Game = 0
+    case Industry = -1
+    case PS = -2
+    case XBOX = -3
+    case EB = -4
+}
 let imageUrlKey = "acontent"
 let colletionNumKey = "collectn"
 let contentKey = "content"
@@ -22,6 +30,8 @@ let titleKey = "title"
 let replyNumKey = "replyn"
 let videoImageKey = "video_img"
 let videoUrlKey = "video_url"
+let newsTypeKey = "name_id"
+let feedTypeKey = "feed_type"
 class NewsManager: NSObject {
     class func fetchNewsFromServer(platform:Platform,completionHandler:(news:[NewsModel])->())
     {
@@ -69,10 +79,31 @@ class NewsManager: NSObject {
                     }
                     else
                     {
-                        
+                        //Video
+                    }
+                    var title = ""
+                    let newsType = newsInfo[newsTypeKey] as? Int
+                    if newsType! == NewsType.Industry.rawValue
+                    {
+                        title = "游戏新闻"
+                    }
+                    else if newsType! == NewsType.Game.rawValue
+                    {
+                        title = (newsInfo[nameKey] as? String)!
+                    }
+                    else if newsType! == NewsType.PS.rawValue
+                    {
+                        title = "PS新闻"
+                    }
+                    else if newsType! == NewsType.XBOX.rawValue
+                    {
+                        title = "XBOX新闻"
+                    }
+                    else
+                    {
+                        title = "二柄"
                     }
                     let content = newsInfo[contentKey] as? String
-                    let title = newsInfo[titleKey] as? String
 //                    print(imgUrlArray.count)
                     let newsModel = NewsModel(imageUrl: imgUrlArray, content: content, title: title)
                     newsArray.append(newsModel)

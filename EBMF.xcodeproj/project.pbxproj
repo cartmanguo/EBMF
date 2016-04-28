@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252384BE1CD1B4D000A3BFE0 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 252384BD1CD1B4D000A3BFE0 /* ImageCell.xib */; };
+		252384C01CD1B4FF00A3BFE0 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252384BF1CD1B4FF00A3BFE0 /* ImageCell.swift */; };
 		25E7D2631CCF341100D45FCA /* UIViewController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E7D2621CCF341100D45FCA /* UIViewController+Container.swift */; };
 		25E7D2651CCF385E00D45FCA /* EBSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E7D2641CCF385E00D45FCA /* EBSegment.swift */; };
 		25E7D2671CCF51AC00D45FCA /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E7D2661CCF51AC00D45FCA /* NewsManager.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		1A19A6125FAC6B1173B22943 /* Pods-EBMF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBMF.release.xcconfig"; path = "Pods/Target Support Files/Pods-EBMF/Pods-EBMF.release.xcconfig"; sourceTree = "<group>"; };
+		252384BD1CD1B4D000A3BFE0 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		252384BF1CD1B4FF00A3BFE0 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		25E7D2621CCF341100D45FCA /* UIViewController+Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Container.swift"; sourceTree = "<group>"; };
 		25E7D2641CCF385E00D45FCA /* EBSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBSegment.swift; sourceTree = "<group>"; };
 		25E7D2661CCF51AC00D45FCA /* NewsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				25F3AB251CD097B900431402 /* IndexCollectionView.swift */,
 				25F3AB1D1CD04F0A00431402 /* NewsCell.swift */,
 				25F3AB1F1CD04F2300431402 /* NewsCell.xib */,
+				252384BF1CD1B4FF00A3BFE0 /* ImageCell.swift */,
+				252384BD1CD1B4D000A3BFE0 /* ImageCell.xib */,
 				25E7D2681CCF612800D45FCA /* NewsModel.swift */,
 				25F65AEC1CC9B856006398D0 /* Main.storyboard */,
 				25F65AFA1CC9BDAC006398D0 /* re.jpg */,
@@ -190,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25F3AB201CD04F2300431402 /* NewsCell.xib in Resources */,
+				252384BE1CD1B4D000A3BFE0 /* ImageCell.xib in Resources */,
 				25F65AFB1CC9BDAC006398D0 /* re.jpg in Resources */,
 				25F65B011CC9EE72006398D0 /* avatar.png in Resources */,
 				25F3AB241CD0878E00431402 /* ps.png in Resources */,
@@ -259,6 +266,7 @@
 				25F3AB1E1CD04F0A00431402 /* NewsCell.swift in Sources */,
 				25E7D2651CCF385E00D45FCA /* EBSegment.swift in Sources */,
 				25F65AEB1CC9B856006398D0 /* ContainerViewController.swift in Sources */,
+				252384C01CD1B4FF00A3BFE0 /* ImageCell.swift in Sources */,
 				25F65AE91CC9B856006398D0 /* AppDelegate.swift in Sources */,
 				25E7D2631CCF341100D45FCA /* UIViewController+Container.swift in Sources */,
 				25F65AFF1CC9ED63006398D0 /* LeftMenuViewController.swift in Sources */,

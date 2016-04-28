@@ -26,6 +26,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         newsListView.delegate = self
         newsListView.backgroundColor = UIColor.lightGrayColor()
         newsListView.registerNib(UINib(nibName: "NewsCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "newscell")
+        newsListView.separatorStyle = .None
         let segment = EBSegment(titles: ["PS","XBOX","在玩"])
         segment.delegate = self
         segment.frame = CGRectMake(0, 0, 185, 25)
@@ -45,17 +46,17 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return newsArray.count
+        return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return newsArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("newscell") as? NewsCell
         cell?.selectionStyle = .None
-        let news = newsArray[indexPath.section]
+        let news = newsArray[indexPath.row]
         cell?.setup(news)
         return cell!
     }
@@ -69,19 +70,19 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let news = newsArray[indexPath.section]
+        let news = newsArray[indexPath.row]
         return news.cellHeight()
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = UIView()
-        header.backgroundColor = UIColor.lightGrayColor()
-        return header
-    }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 8
-    }
+//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let header = UIView()
+//        header.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)
+//        return header
+//    }
+//    
+//    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 8
+//    }
     
     //MARK: -UICollection
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -89,42 +90,31 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let model = newsArray[(collectionView as! IndexCollectionView).indexPath!.section]
+        let model = newsArray[(collectionView as! IndexCollectionView).indexPath!.row]
 //        print(min(3, model.imageUrl!.count))
         return min(3, model.imageUrl!.count)
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
-        let model = newsArray[(collectionView as! IndexCollectionView).indexPath!.section]
-
-        var imageWidth = (UIScreen.mainScreen().bounds.size.width - leftMargin - rightMargin - space*2)/3
-        if model.imageUrl?.count == 1
-        {
-            imageWidth += 35//这个的宽度需要和itemsize的回调返回的size宽度一直，不然显示的时候要扯拐
-        }
-        let imageView = UIImageView(frame: CGRectMake(0, 0, imageWidth, 100))
-        imageView.contentMode = .ScaleAspectFill
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! ImageCell
+        let model = newsArray[(collectionView as! IndexCollectionView).indexPath!.row]
         let imgUrl = model.imageUrl![indexPath.row]
-        imageView.kf_setImageWithURL(NSURL(string: imgUrl)!,placeholderImage: UIImage(named: "ps"))
-        cell.contentView.addSubview(imageView)
-        cell.contentView.clipsToBounds = true
+        cell.imageView.kf_setImageWithURL(NSURL(string: imgUrl)!,placeholderImage: UIImage(named: "ps"))
         cell.contentView.backgroundColor = UIColor.brownColor()
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let model = newsArray[(collectionView as! IndexCollectionView).indexPath!.section]
+        let model = newsArray[(collectionView as! IndexCollectionView).indexPath!.row]
         let imageWidth = (UIScreen.mainScreen().bounds.size.width - leftMargin - rightMargin - space*2)/3
         if model.imageUrl?.count == 1
         {
-            return CGSize(width: imageWidth+35, height: 100)
+            collectionView.frame.size = CGSizeMake(160, collectionView.frame.size.height)
+            return CGSize(width: 160, height: collectionView.frame.size.height)
         }
         else
         {
-            
-            return CGSize(width: imageWidth, height: 100)
-
+            return CGSize(width: imageWidth, height:collectionView.frame.size.height)
         }
     }
     
@@ -132,14 +122,19 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return 0
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0, 0, 0, 0)
+    }
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
+
     }
     
+    //MARK: - Other
     func messages()
     {
         
