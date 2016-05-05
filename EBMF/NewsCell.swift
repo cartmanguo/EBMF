@@ -17,6 +17,8 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var imageCollectionView:IndexCollectionView!
+    @IBOutlet weak var indicatorButton:UIButton!
+
     var newModel:NewsModel?
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,6 +37,14 @@ class NewsCell: UITableViewCell {
     {
         newsTitleLabel.text = newsModel.title
         contentLabel.text = newsModel.content
+        if newsModel.imageUrl?.count > 3
+        {
+            self.indicatorButton.hidden = false
+        }
+        else
+        {
+            self.indicatorButton.hidden = true
+        }
         self.newModel = newsModel
     }
     

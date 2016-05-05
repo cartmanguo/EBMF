@@ -78,28 +78,28 @@
                                         <rect key="frame" x="0.0" y="0.0" width="76" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="赞">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P07-2f-AfD">
                                         <rect key="frame" x="76" y="0.0" width="76" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="评论">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fG-pX-Qei">
                                         <rect key="frame" x="152" y="0.0" width="76" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="收藏">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQY-Vf-hF3">
                                         <rect key="frame" x="228" y="0.0" width="76" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="分享">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                 </subviews>
@@ -114,6 +114,14 @@
                                     <constraint firstAttribute="height" constant="8" id="4f4-ub-vEK"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vni-CS-cvk">
+                                <rect key="frame" x="284" y="143" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="XAa-bH-MsV"/>
+                                    <constraint firstAttribute="width" constant="33" id="Xd0-Mq-91V"/>
+                                </constraints>
+                                <state key="normal" image="indicator"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -127,6 +135,7 @@
                             <constraint firstItem="z4Y-bz-jZH" firstAttribute="top" secondItem="iCO-CE-hNz" secondAttribute="bottom" constant="9" id="F2y-xn-JQg"/>
                             <constraint firstItem="iCO-CE-hNz" firstAttribute="top" secondItem="oXl-sn-STQ" secondAttribute="bottom" constant="9" id="Hqp-A2-6bN"/>
                             <constraint firstItem="d2C-bF-zZE" firstAttribute="top" secondItem="eOO-TN-NMO" secondAttribute="bottom" constant="13" id="L76-ev-AY4"/>
+                            <constraint firstItem="vni-CS-cvk" firstAttribute="centerY" secondItem="eOO-TN-NMO" secondAttribute="centerY" id="LGa-8c-Qr2"/>
                             <constraint firstItem="bGu-Lu-Vr7" firstAttribute="leading" secondItem="oXl-sn-STQ" secondAttribute="trailing" constant="14" id="N2h-tR-obd"/>
                             <constraint firstItem="d2C-bF-zZE" firstAttribute="leading" secondItem="s8a-a1-CDq" secondAttribute="leading" constant="8" id="TAl-Rg-mPn"/>
                             <constraint firstItem="oXl-sn-STQ" firstAttribute="leading" secondItem="s8a-a1-CDq" secondAttribute="leading" constant="8" id="VuO-kg-fMN"/>
@@ -141,6 +150,7 @@
                             <constraint firstItem="eOO-TN-NMO" firstAttribute="top" secondItem="z4Y-bz-jZH" secondAttribute="bottom" constant="8" id="v5Q-Cv-9cm"/>
                             <constraint firstItem="eOO-TN-NMO" firstAttribute="leading" secondItem="s8a-a1-CDq" secondAttribute="leading" constant="8" id="xtZ-dv-nNH"/>
                             <constraint firstItem="z4Y-bz-jZH" firstAttribute="trailing" secondItem="iCO-CE-hNz" secondAttribute="trailing" constant="-16" id="xto-JG-8cQ"/>
+                            <constraint firstAttribute="trailing" secondItem="vni-CS-cvk" secondAttribute="trailing" constant="3" id="zw8-n4-2KA"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -162,6 +172,7 @@
                 <outlet property="contentLabel" destination="z4Y-bz-jZH" id="KxA-RJ-JoQ"/>
                 <outlet property="heightConstraint" destination="XBx-qF-M03" id="YbC-Kz-Zva"/>
                 <outlet property="imageCollectionView" destination="eOO-TN-NMO" id="Ug1-6h-IPG"/>
+                <outlet property="indicatorButton" destination="vni-CS-cvk" id="JlK-aK-qqj"/>
                 <outlet property="newsIcon" destination="oXl-sn-STQ" id="3PV-7O-e1M"/>
                 <outlet property="newsTitleLabel" destination="RWT-vZ-7Zb" id="e7o-n6-nqk"/>
                 <outlet property="timeLabel" destination="bGu-Lu-Vr7" id="sS9-fB-S0w"/>
@@ -171,5 +182,6 @@
     </objects>
     <resources>
         <image name="avatar.png" width="192" height="192"/>
+        <image name="indicator" width="72" height="72"/>
     </resources>
 </document>

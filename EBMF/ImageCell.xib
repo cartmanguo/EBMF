@@ -17,19 +17,33 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="frv-Pc-Rdp">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJ2-yo-tOj">
+                        <rect key="frame" x="9" y="9" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="Wfd-a4-pHR"/>
+                            <constraint firstAttribute="height" constant="32" id="m3C-nD-u0F"/>
+                        </constraints>
+                        <state key="normal" image="play"/>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
+                <constraint firstItem="SJ2-yo-tOj" firstAttribute="centerX" secondItem="2Xo-q0-WiM" secondAttribute="centerX" id="08G-qo-yej"/>
                 <constraint firstAttribute="trailing" secondItem="frv-Pc-Rdp" secondAttribute="trailing" id="AGP-gZ-S3X"/>
                 <constraint firstItem="frv-Pc-Rdp" firstAttribute="leading" secondItem="2Xo-q0-WiM" secondAttribute="leading" id="JBy-PT-KR0"/>
                 <constraint firstAttribute="bottom" secondItem="frv-Pc-Rdp" secondAttribute="bottom" id="Vj3-V8-CoJ"/>
+                <constraint firstItem="SJ2-yo-tOj" firstAttribute="centerY" secondItem="2Xo-q0-WiM" secondAttribute="centerY" id="gis-RM-heF"/>
                 <constraint firstItem="frv-Pc-Rdp" firstAttribute="top" secondItem="2Xo-q0-WiM" secondAttribute="top" id="r65-af-jSC"/>
             </constraints>
             <connections>
                 <outlet property="imageView" destination="frv-Pc-Rdp" id="asW-Nx-oCD"/>
+                <outlet property="playButton" destination="SJ2-yo-tOj" id="8WP-Nl-L7s"/>
             </connections>
             <point key="canvasLocation" x="167" y="46"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="play" width="128" height="128"/>
+    </resources>
 </document>

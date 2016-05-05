@@ -24,7 +24,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         view.addSubview(newsListView)
         newsListView.dataSource = self
         newsListView.delegate = self
-        newsListView.backgroundColor = UIColor.lightGrayColor()
+        newsListView.backgroundColor = UIColor(red: 237/255, green: 237/255, blue: 237/255, alpha: 1.0)
         newsListView.registerNib(UINib(nibName: "NewsCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "newscell")
         newsListView.separatorStyle = .None
         let segment = EBSegment(titles: ["PS","XBOX","在玩"])
@@ -74,16 +74,6 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return news.cellHeight()
     }
     
-//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let header = UIView()
-//        header.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)
-//        return header
-//    }
-//    
-//    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 8
-//    }
-    
     //MARK: -UICollection
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -91,7 +81,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let model = newsArray[(collectionView as! IndexCollectionView).indexPath!.row]
-//        print(min(3, model.imageUrl!.count))
+        //        print(min(3, model.imageUrl!.count))
         return min(3, model.imageUrl!.count)
     }
     
@@ -99,8 +89,8 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! ImageCell
         let model = newsArray[(collectionView as! IndexCollectionView).indexPath!.row]
         let imgUrl = model.imageUrl![indexPath.row]
+        cell.playButton.hidden = !model.isVideoContent
         cell.imageView.kf_setImageWithURL(NSURL(string: imgUrl)!,placeholderImage: UIImage(named: "ps"))
-        cell.contentView.backgroundColor = UIColor.brownColor()
         return cell
     }
     
@@ -129,9 +119,9 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0
     }
-
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-
+        
     }
     
     //MARK: - Other
@@ -143,13 +133,13 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func showProfile()
     {
         guard let containerViewController = self.containerViewController()
-        else
+            else
         {
             return
         }
         containerViewController.showLeftPanel()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -159,15 +149,15 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         print("select \(index)")
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

@@ -36,7 +36,7 @@ class NewsManager: NSObject {
     class func fetchNewsFromServer(platform:Platform,completionHandler:(news:[NewsModel])->())
     {
         let ps4 = "http://api.diershoubing.com:5000/feed/class/1/?pn=0&rn=20&src=ios&version=3.2"
-        let xbox = "http://api.diershoubing.com:5000/feed/class/2/?pn=0&rn=20&src=ios&version=3.2"
+        //        let xbox = "http://api.diershoubing.com:5000/feed/class/2/?pn=0&rn=20&src=ios&version=3.2"
         Alamofire.request(
             .GET,
             ps4,
@@ -57,13 +57,15 @@ class NewsManager: NSObject {
                 }
                 var newsArray = [NewsModel]()
                 guard let newsFeed = value["feeds"] as? NSArray
-                else
+                    else
                 {
                     return
                 }
-//                print(newsFeed)
+                //                print(newsFeed)
                 for newsInfo in newsFeed
                 {
+                    var isVideo = false
+                    var videoUrl:String?
                     var imgUrlArray = [String]()
                     let imageUrl = newsInfo[imageUrlKey] as? String
                     if imageUrl!.isUrl()
@@ -80,6 +82,10 @@ class NewsManager: NSObject {
                     else
                     {
                         //Video
+                        isVideo = true
+                        let videoImageUrl = newsInfo[videoImageKey] as? String
+                        videoUrl = newsInfo[videoUrlKey] as? String
+                        imgUrlArray.append(videoImageUrl!)
                     }
                     var title = ""
                     let newsType = newsInfo[newsTypeKey] as? Int
@@ -104,8 +110,8 @@ class NewsManager: NSObject {
                         title = "二柄"
                     }
                     let content = newsInfo[contentKey] as? String
-//                    print(imgUrlArray.count)
-                    let newsModel = NewsModel(imageUrl: imgUrlArray, content: content, title: title)
+                    //                    print(imgUrlArray.count)
+                    let newsModel = NewsModel(imageUrl: imgUrlArray, videoUrl: videoUrl, content: content, title: title, isVideoContent: isVideo)
                     newsArray.append(newsModel)
                 }
                 completionHandler(news: newsArray)
