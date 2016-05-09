@@ -121,7 +121,11 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
+        let model = newsArray[(collectionView as! IndexCollectionView).indexPath!.row]
+        let imageBrowseViewController = FullScreenImageViewController()
+        imageBrowseViewController.imageUrls = model.imageUrl
+        imageBrowseViewController.currentIndex = indexPath.row
+        self.presentViewController(imageBrowseViewController, animated: true, completion: nil)
     }
     
     //MARK: - Other
