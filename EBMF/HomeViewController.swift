@@ -67,6 +67,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         newsCell.imageCollectionView.dataSource = self
         newsCell.imageCollectionView.reloadData()
         newsCell.imageCollectionView.indexPath = indexPath
+        newsCell.indicatorButton.addTarget(self, action: #selector(HomeViewController.showImageBrowse(_:)),forControlEvents: .TouchUpInside)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -129,6 +130,17 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     //MARK: - Other
+    func showImageBrowse(sender:UIButton)
+    {
+        let indexPathForCell = self.newsListView.indexPathForRowAtPoint(self.newsListView.convertPoint(sender.center, fromView: sender.superview))
+        let model = newsArray[indexPathForCell!.row]
+        let imageBrowseViewController = FullScreenImageViewController()
+        imageBrowseViewController.imageUrls = model.imageUrl
+        imageBrowseViewController.currentIndex = 3
+        self.presentViewController(imageBrowseViewController, animated: true, completion: nil)
+
+    }
+    
     func messages()
     {
         

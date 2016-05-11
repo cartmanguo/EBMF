@@ -18,7 +18,7 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var imageCollectionView:IndexCollectionView!
     @IBOutlet weak var indicatorButton:UIButton!
-
+    
     var newModel:NewsModel?
     override func awakeFromNib() {
         super.awakeFromNib()

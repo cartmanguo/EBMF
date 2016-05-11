@@ -56,7 +56,7 @@ class PhotoView: UIScrollView,UIScrollViewDelegate {
         self.maximumZoomScale = 1
         self.minimumZoomScale = imageScale
         self.zoomScale = imageScale
-        print(imageScale)
+//        print(imageScale)
         self.contentSize = CGSizeMake(CGRectGetWidth(imageFrame), CGRectGetHeight(imageFrame))
         imageView?.frame = imageFrame
     }
